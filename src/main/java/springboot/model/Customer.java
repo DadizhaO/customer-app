@@ -31,6 +31,10 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
+    public Customer(BigDecimal custNum) {
+        this.custNum = custNum;
+    }
+
     public Customer(BigDecimal custNum, String company, Salesrep custRep, BigDecimal creditLimit, Set<Order> orders) {
         this.custNum = custNum;
         this.company = company;
@@ -84,9 +88,7 @@ public class Customer implements Serializable {
         return "Customer{" +
                 "custNum=" + custNum +
                 ", company='" + company + '\'' +
-                ", custRep=" + custRep.getEmplNum() +
                 ", creditLimit=" + creditLimit +
-                ", orders=" + orders +
                 '}';
     }
 }
