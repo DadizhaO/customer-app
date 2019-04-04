@@ -29,7 +29,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public void addOrder(/*@Valid*/ @RequestBody Customer customerRequest) {
+    public void addCustomer(@RequestBody Customer customerRequest) {
         LOG.info("addCustomer start, customerRequest={}", customerRequest);
         customerService.insertCustomer(customerRequest);
         LOG.info("addCustomer end");
